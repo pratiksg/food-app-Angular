@@ -1,0 +1,122 @@
+<div class="container">
+
+    <table class="table table-bordered">
+        <!-- *ngIf="order && orders.length"> -->
+
+        <thead class="thead-dark">
+
+            <tr>
+                <!-- <td>
+                            <a routerLink="/order/{{order.orderId}}">
+                            
+                        </a>
+                        </td> -->
+
+                <th scope="col">OrderId</th>
+
+                <th scope="col">Price</th>
+
+                <th scope="col">Payment Type</th>
+
+                <th scope="col">Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor=" let orders of order">
+                <td>{{orders._id}}</td> 
+
+                <td>{{orders.price}}</td>
+
+                <td>{{orders.paymentType}}</td>
+
+                <td allign="center">
+                    <div class="container">
+
+                        <button type="button" class="btn btn-primary"
+                            [disabled]="butttonDisabled">Recieved</button>&nbsp;&nbsp;
+
+                        <button type="button" class="btn btn-primary">Delivered</button>&nbsp;&nbsp;
+
+                        <button type="button" class="btn btn-primary">Not Delivered</button>
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <!-- <tr>
+
+                    <td>1235</td>
+    
+                    <td>$250</td>
+    
+                    <td>Wallet</td>
+    
+                    <td allign="center">
+                        <div class="container">
+    
+                            <button type="button" class="btn btn-primary">Recieved</button>&nbsp;&nbsp;
+    
+                            <button type="button" class="btn btn-primary">Delievered</button>&nbsp;&nbsp;
+    
+                            <button type="button" class="btn btn-primary">Not Delievered</button>
+                        </div>
+    
+                    </td>
+    
+    
+                </tr>
+                <tr>
+
+                        <td>1236</td>
+        
+                        <td>$500</td>
+        
+                        <td>Debit card</td>
+        
+                        <td allign="center">
+                            <div class="container">
+        
+                                <button type="button" class="btn btn-primary">Recieved</button>&nbsp;&nbsp;
+        
+                                <button type="button" class="btn btn-primary">Delievered</button>&nbsp;&nbsp;
+        
+                                <button type="button" class="btn btn-primary">Not Delievered</button>
+                            </div>
+        
+                        </td>
+        
+        
+                    </tr>
+                    <tr>
+
+                            <td>1237</td>
+            
+                            <td>$100</td>
+            
+                            <td>Credit Card</td>
+            
+                            <td allign="center">
+                                <div class="container">
+            
+                                    <button type="button" class="btn btn-primary">Recieved</button>&nbsp;&nbsp;
+            
+                                    <button type="button" class="btn btn-primary">Delievered</button>&nbsp;&nbsp;
+            
+                                    <button type="button" class="btn btn-primary">Not Delievered</button>
+                                </div>
+            
+                            </td>
+            
+            
+                        </tr> -->
+
+        </tbody>
+
+    </table>
+
+</div>

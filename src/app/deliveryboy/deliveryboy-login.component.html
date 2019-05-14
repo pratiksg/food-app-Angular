@@ -1,0 +1,92 @@
+<div class="container" style="width:40%">
+        
+    <h4 class="text-center">Login Form</h4>
+    <form class="form-horizontal" (ngSubmit)="checkLogin()" #deliveryboyForm="ngForm">
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <div class="col-sm-12">
+                <input type="email" class="form-control" placeholder="Enter email"
+                    [(ngModel)]="email" name="email" required="required" />
+            </div>
+        </div>
+  
+
+    <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="col-sm-12">
+            <input type="password" class="form-control" id="password" placeholder="Enter Password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"[(ngModel)]="password" name="password" required />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-block btn-primary" routerLink="/order" >Login</button>
+    <br>
+    <div class="row" style="margin-left:90px">
+        <div class="col-sm-6" >
+          <a href="https://enterprise.github.com/login" title=""><img src="/assets/images/github logo.png" height="40px" width="40px"
+              class="img-responsive"></a>
+        </div>
+        <div class="col-sm-6">
+          <a href="https://www.linkedin.com/uas/login?trk=guest_homepage-basic_nav-header-signin" title=""><img src="/assets/images/linkedin logo.png" height="55px" width="55px"
+              class="img-responsive"></a>
+        </div>
+        <br>
+        <br>
+      </div>
+    <h6 class="text-center">
+    <a routerLink ="/signup">New User? Create new Account</a>
+    </h6>
+
+    </form>
+        
+
+
+<!-- <div class="container-fluid">
+
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>LogIn</h3>
+                    
+                </div>
+                <div class="card-body">
+                    <form (ngSubmit)="checkLogin()" #accountForm="ngForm">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email Id"
+                             [(ngModel)]="email">
+    
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="password"
+                             [(ngModel)]="password">
+                        </div>
+                        <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div>
+                        <div class="form-group">
+                           
+                <button type="submit" class="btn btn-block btn-primary" routerLink="/order"  >Login</button>
+                <br>
+                      </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account?<a routerLink="/signup">Sign Up</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a routerLink="/forget">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- <router-outlet></router-outlet> -->
+    </div> -->
